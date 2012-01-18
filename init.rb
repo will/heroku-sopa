@@ -7,7 +7,7 @@ class Heroku::Command::Sopa < Heroku::Command::BaseWithApp
 
   def on
     ensure_custom_error_pages
-    heroku.add_config_vars(app, { "MAINTENANCE_PAGE_URL" => "https://www.google.com/landing/takeaction/" })
+    heroku.add_config_vars(app, { "MAINTENANCE_PAGE_URL" => "http://sopasoup.heroku.com" })
     heroku.maintenance(app, :on)
     display "SOPA protest is now enabled"
   end
